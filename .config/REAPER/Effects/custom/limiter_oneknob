@@ -1,0 +1,22 @@
+desc:One Knob Clipper
+slider1:0<-30,0,1>Threshold [dB]
+
+@init
+  log2db = 8.6858896380650365530225783783321; // 20 / ln(10)
+  db2log = 0.11512925464970228420089957273422; // ln(10) / 20
+  //volumereduction = exp(ceiling*db2log);
+  volumereduction = 0.9;
+
+@slider
+thresh = exp(slider1*db2log);
+makeup_gain = 1/exp(slider1*db2log);
+
+@sample
+sample_l = spl0; 
+sample_r = spl1;
+
+output_l = min( max(sample_l,-thresh) , thresh );
+output_r = min( max(sample_r,-thresh) , thresh );
+
+spl0 = output_l * makeup_gain * volumereduction;
+spl1 = output_r * makeup_gain * volumereduction;

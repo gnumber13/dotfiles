@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/matt'
+let g:netrw_dirhist_3='/home/matt/.config/nvim'
+let g:netrw_dirhist_2='/home/matt/.config'
+let g:netrw_dirhist_1='/home/matt'
+let g:netrw_dirhist_0='/home/matt/.local'
+let g:netrw_dirhist_9='/home/matt'
+let g:netrw_dirhist_8='/home/matt/Dokumente/Hochschule/Semester-Aktuell/Strömung'
+let g:netrw_dirhist_7='/home/matt/Dokumente/Hochschule/Semester-Aktuell'
+let g:netrw_dirhist_6='/home/matt/Dokumente/Hochschule/Semester-Aktuell/Strömung'
+let g:netrw_dirhist_5='/home/matt/Dokumente/Hochschule/Semester-Aktuell'
