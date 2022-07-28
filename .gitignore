@@ -3,8 +3,8 @@
 
 # whitelist
 # .config
-!Scripts/
-Scripts/*
+#!Scripts/
+#Scripts/*
 
 !.config/
 .config/*
