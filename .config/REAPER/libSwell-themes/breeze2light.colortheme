@@ -1,0 +1,90 @@
+default_font_face Tex Gyre Heros
+default_font_size 12
+menubar_height 24
+menubar_font_size 12
+menubar_spacing_width 20
+menubar_margin_width 10
+scrollbar_width 10
+scrollbar_min_thumb_height 4
+combo_height 20
+_3dface #eff0f1
+_3dshadow #9AA4AE
+_3dhilight #D0D0D0
+_3ddkshadow #ffffff
+button_bg #FCFCFC ; defaults to _3dface
+button_text #000000
+button_text_disabled #808080
+button_shadow #9AA4AE
+button_hilight #D0D0D0
+checkbox_text #000000
+checkbox_text_disabled #808080
+checkbox_fg #262626
+checkbox_inter #BFBFBF
+checkbox_bg #ffffff
+scrollbar #202020
+scrollbar_fg #a0a0a0
+scrollbar_bg #ffffff
+edit_cursor #262626
+edit_bg #ffffff
+edit_bg_disabled #c3c3c3
+edit_text #000000
+edit_text_disabled #808080
+edit_bg_sel #3daee9
+edit_text_sel #FFFFFF
+; edit_hilight #D0D0D0 ; defaults to _3dhilight
+; edit_shadow #9AA4AE ; defaults to _3dshadow
+info_bk #A3ACAC
+info_text #2F3333
+menu_bg #ffffff ; defaults to _3dface
+menu_shadow #ffffff ; defaults to _3dshadow
+; menu_hilight #dadada ; defaults to _3dhilight
+; menu_text #000000 ; defaults to button_text
+menu_text_disabled #808080
+menu_bg_sel #3daee9 ; defaults to menu_text
+menu_text_sel #FFFFFF ; defaults to menu_bg
+menu_scroll #404040
+; menu_scroll_arrow #606060 ; defaults to _3dshadow
+menu_submenu_arrow #575757
+menubar_bg #dee0e2 ; defaults to menu_bg
+menubar_bg_inactive #eff0f1
+menubar_text #000000 ; defaults to menu_text
+menubar_text_disabled #EBEBEB
+menubar_bg_sel #3daee9 ; defaults to menu_bg_sel
+menubar_text_sel #FFFFFF ; defaults to menu_text_sel
+trackbar_track #FCFCFC
+trackbar_mark #606060
+trackbar_knob #303030
+progress #1A73E8
+; label_text #000000 ; defaults to button_text
+; label_text_disabled #808080 ; defaults to button_text_disabled
+; combo_text #000000 ; defaults to button_text
+; combo_text_disabled #808080 ; defaults to button_text_disabled
+combo_bg #FCFCFC
+combo_bg2 #ffffff
+combo_shadow #9AA4AE
+combo_hilight #D0D0D0 ; defaults to _3dhilight
+combo_arrow #000000
+; combo_arrow_press #FCFCFC ; defaults to _3dhilight
+listview_bg #FAFAFA
+listview_bg_sel #3daee9
+listview_text #000000
+listview_text_sel #FFFFFF ; defaults to listview_text
+; listview_grid #FCFCFC ; defaults to _3dhilight
+listview_hdr_arrow #606060
+; listview_hdr_shadow #dadada ; defaults to _3dshadow
+; listview_hdr_hilight #ffffff ; defaults to _3dhilight
+listview_hdr_bg #ffffff ; defaults to _3dface
+; listview_hdr_text #000000 ; defaults to button_text
+treeview_text #000000
+treeview_bg #FAFAFA
+treeview_bg_sel #3daee9
+treeview_text_sel #FFFFFF
+treeview_arrow #404040
+tab_shadow #9AA4AE
+tab_hilight #9AA4AE
+tab_text #000000
+focusrect #d6d6d6
+group_text #000000
+group_shadow #CECECE ; defaults to _3dshadow
+group_hilight #eeeeee; defaults to _3dhilight
+focus_hilight #3daee9

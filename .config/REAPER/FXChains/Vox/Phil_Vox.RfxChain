@@ -1,0 +1,66 @@
+BYPASS 0 0
+<LV2 "LV2: LSP Parametric Equalizer x16 Mono (LSP LV2)" http://lsp-plug.in/plugins/lv2/para_equalizer_x16_mono ""
+  CFG 0 1068 658 Phil_Resonant_Peak
+  <IN_PINS
+  >
+  <OUT_PINS
+    PIN 0 0 1
+  >
+  P enabled 1 g_in 1 g_out 0.47315254807472229 mode 0 fft 0 react 0.200000002980232239 shift 1 zoom 1 fsel 0
+  P frqs 0 ft_0 0 fm_0 0 s_0 0 xs_0 0 xm_0 0 f_0 16 g_0 1 q_0 0 hue_0 0 ft_1 0 fm_1 0 s_1 0 xs_1 0 xm_1 0
+  P f_1 25 g_1 1 q_1 0 hue_1 0.0625 ft_2 0 fm_2 0 s_2 0 xs_2 0 xm_2 0 f_2 40 g_2 1 q_2 0 hue_2 0.125 ft_3 6
+  P fm_3 0 s_3 0 xs_3 0 xm_3 0 f_3 605.3031005859375 g_3 15.536995887756347656 q_3 5.5 hue_3 0.1875 ft_4 0
+  P fm_4 0 s_4 0 xs_4 0 xm_4 0 f_4 100 g_4 1 q_4 0 hue_4 0.25 ft_5 0 fm_5 0 s_5 0 xs_5 0 xm_5 0 f_5 160 g_5 1
+  P q_5 0 hue_5 0.3125 ft_6 0 fm_6 0 s_6 0 xs_6 0 xm_6 0 f_6 250 g_6 1 q_6 0 hue_6 0.375 ft_7 0 fm_7 0 s_7 0
+  P xs_7 0 xm_7 0 f_7 400 g_7 1 q_7 0 hue_7 0.4375 ft_8 0 fm_8 0 s_8 0 xs_8 0 xm_8 0 f_8 630 g_8 1 q_8 0
+  P hue_8 0.5 ft_9 0 fm_9 0 s_9 0 xs_9 0 xm_9 0 f_9 1000 g_9 1 q_9 0 hue_9 0.5625 ft_10 0 fm_10 0 s_10 0
+  P xs_10 0 xm_10 0 f_10 1600 g_10 1 q_10 0 hue_10 0.625 ft_11 0 fm_11 0 s_11 0 xs_11 0 xm_11 0 f_11 2500
+  P g_11 1 q_11 0 hue_11 0.6875 ft_12 0 fm_12 0 s_12 0 xs_12 0 xm_12 0 f_12 4000 g_12 1 q_12 0 hue_12 0.75
+  P ft_13 0 fm_13 0 s_13 0 xs_13 0 xm_13 0 f_13 6300 g_13 1 q_13 0 hue_13 0.8125 ft_14 0 fm_14 0 s_14 0 xs_14 0
+  P xm_14 0 f_14 10000 g_14 1 q_14 0 hue_14 0.875 ft_15 0 fm_15 0 s_15 0 xs_15 0 xm_15 0 f_15 16000 g_15 1
+  P q_15 0 hue_15 0.9375
+  <STATE
+    <L http://lsp-plug.in/plugins/lv2/para_equalizer_x16_mono/KVT "" http://lsp-plug.in/types/lv2/types#KVT 3
+    >
+  >
+>
+PRESETNAME Phil_Resonant_Peak
+WAK 0 0
+BYPASS 0 0
+<LV2 "LV2: LSP Multiband Compressor Mono x8 (LSP LV2)" http://lsp-plug.in/plugins/lv2/mb_compressor_mono ""
+  CFG 0 1080 704 Phil_Voc
+  <IN_PINS
+  >
+  <OUT_PINS
+    PIN 0 0 1
+  >
+  P enabled 1 mode 1 g_in 1 g_out 1 g_dry 0 g_wet 1 react 0.200000002980232239 shift 1 zoom 1 envb 1 bsel 0
+  P flt 1 ife 1 ofe 1 cbe_1 0 sf_1 40 cbe_2 1 sf_2 99.68718719482421875 cbe_3 1 sf_3 433.0257568359375 cbe_4 1
+  P sf_4 1589.2393798828125 cbe_5 0 sf_5 1587 cbe_6 1 sf_6 14215.8359375 cbe_7 0 sf_7 10000 scm_0 1 sla_0 0
+  P scr_0 10 scp_0 1 sclc_0 0 schc_0 0 sclf_0 10 schf_0 40 cm_0 0 ce_0 1 bs_0 0 bm_0 0 al_0 0.251190006732940674
+  P at_0 20 rrl_0 0 rt_0 100 cr_0 1 kn_0 0.501179993152618408 bth_0 0.000250999990385026 bsa_0 1.995260000228881836
+  P mk_0 0.001000000047497451 hue_0 0 scm_1 1 sla_1 0 scr_1 10 scp_1 1 sclc_1 0 schc_1 0 sclf_1 40 schf_1 100
+  P cm_1 0 ce_1 1 bs_1 0 bm_1 0 al_1 0.251190006732940674 at_1 20 rrl_1 0 rt_1 100 cr_1 1 kn_1 0.501179993152618408
+  P bth_1 0.000250999990385026 bsa_1 1.995260000228881836 mk_1 1 hue_1 0.125 scm_2 1 sla_2 0 scr_2 10 scp_2 1
+  P sclc_2 0 schc_2 0 sclf_2 100 schf_2 252 cm_2 0 ce_2 1 bs_2 0 bm_2 0 al_2 0.251190006732940674 at_2 20
+  P rrl_2 0 rt_2 100 cr_2 1 kn_2 0.501179993152618408 bth_2 0.000250999990385026 bsa_2 1.995260000228881836
+  P mk_2 1 hue_2 0.25 scm_3 1 sla_3 0 scr_3 10 scp_3 1 sclc_3 0 schc_3 0 sclf_3 252 schf_3 632 cm_3 0 ce_3 1
+  P bs_3 0 bm_3 0 al_3 0.251190006732940674 at_3 20 rrl_3 0 rt_3 100 cr_3 1 kn_3 0.501179993152618408 bth_3 0.000250999990385026
+  P bsa_3 1.995260000228881836 mk_3 1 hue_3 0.375 scm_4 1 sla_4 0 scr_4 10 scp_4 1 sclc_4 0 schc_4 0 sclf_4 632
+  P schf_4 1587 cm_4 0 ce_4 1 bs_4 0 bm_4 0 al_4 0.251190006732940674 at_4 20 rrl_4 0 rt_4 100 cr_4 1 kn_4 0.501179993152618408
+  P bth_4 0.000250999990385026 bsa_4 1.995260000228881836 mk_4 2.653295993804931641 hue_4 0.5 scm_5 1 sla_5 0
+  P scr_5 10 scp_5 1 sclc_5 0 schc_5 0 sclf_5 1587 schf_5 3984 cm_5 0 ce_5 1 bs_5 0 bm_5 0 al_5 0.251190006732940674
+  P at_5 20 rrl_5 0 rt_5 100 cr_5 1 kn_5 0.501179993152618408 bth_5 0.000250999990385026 bsa_5 1.995260000228881836
+  P mk_5 1 hue_5 0.625 scm_6 1 sla_6 0 scr_6 10 scp_6 1 sclc_6 0 schc_6 0 sclf_6 3984 schf_6 10000 cm_6 0
+  P ce_6 1 bs_6 0 bm_6 0 al_6 0.251190006732940674 at_6 20 rrl_6 0 rt_6 100 cr_6 1 kn_6 0.501179993152618408
+  P bth_6 0.000250999990385026 bsa_6 1.995260000228881836 mk_6 0.0063854712061584 hue_6 0.75 scm_7 1 sla_7 0
+  P scr_7 10 scp_7 1 sclc_7 0 schc_7 0 sclf_7 10000 schf_7 20000 cm_7 0 ce_7 1 bs_7 0 bm_7 0 al_7 0.251190006732940674
+  P at_7 20 rrl_7 0 rt_7 100 cr_7 1 kn_7 0.501179993152618408 bth_7 0.000250999990385026 bsa_7 1.995260000228881836
+  P mk_7 1 hue_7 0.875
+  <STATE
+    <L http://lsp-plug.in/plugins/lv2/mb_compressor_mono/KVT "" http://lsp-plug.in/types/lv2/types#KVT 3
+    >
+  >
+>
+PRESETNAME Phil_Voc
+WAK 0 0

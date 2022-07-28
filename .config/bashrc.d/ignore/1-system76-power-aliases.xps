@@ -1,0 +1,5 @@
+alias which-graphics='system76-power graphics'
+alias switch-integrated='system76-power graphics integrated'
+alias switch-nvidia='system76-power graphics nvidia'
+alias switch-hybrid='system76-power graphics hybrid'
+alias switch-compute='system76-power graphics compute'

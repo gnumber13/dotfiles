@@ -1,0 +1,33 @@
+# sourced by ~/.bashrc
+
+## Creates an archive (*.tar.gz) from given directory.
+function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
+
+## Create a ZIP archive of a file or folder.
+function makezip() { zip -r "${1%%/}.zip" "$1" ; }
+
+# Functions
+mkcd () { mkdir -p $1 && cd $1 ; }
+mkmv () { 
+    target_dir=$( echo $2 | rev | cut -d'/' -f2- | rev)
+
+    if [ ! -d $target_dir ]; then
+        echo "creating $target_dir.." 
+        mkdir -p $target_dir
+    fi
+
+    mv $1 $2
+}
+mked () {
+    target_dir=$( echo $1 | rev | cut -d'/' -f2- | rev)
+
+    if [ ! -d $target_dir ]; then
+        echo "creating $target_dir.." 
+        mkdir -p $target_dir
+    fi
+
+    $EDITOR $1
+}
+mockdb_conn () {
+    psql -d mockdb -h localhost -p 5434 admin
+}

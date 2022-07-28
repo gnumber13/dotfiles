@@ -1,0 +1,22 @@
+# sourced by ~/.bashrc
+
+################## bashrc according to distro ###################
+OS_DERIVATIVE=$(grep ID -m1 /etc/os-release | cut -d'=' -f2)
+
+case $OS_DERIVATIVE in
+
+	'ubuntu'|'pop'|'debian') 		# 'or'|'or'|'or')
+		alias pm='sudo apt'
+		alias up='sudo apt update && sudo apt upgrade'
+		;;
+	'arch'|'manjaro'|'endeavouros')
+		alias pm='sudo pacman'
+		alias up='sudo pacman -Syu'
+		;;
+	'centos'|'rocky'|'fedora'|'almalinux')
+		alias pm='sudo dnf'
+		alias up='sudo dnf update && sudo dnf upgrade'
+		;;
+	*) 					# ever other case
+		;;
+esac

@@ -1,0 +1,88 @@
+#!/bin/sh
+
+# sourced by ~/.bashrc
+
+# system shortcuts
+## simple
+alias vim='nvim'
+alias e='nvim'
+alias se='sudo nvim'
+alias SS='sudo systemctl'
+alias dl='aria2c -d ~/Downloads'
+alias cl='clear'
+alias ..='cd ..'
+alias bashup='source ~/.bashrc'
+alias journalquery='cd ~/Dokumente/Journal/ && grep -r'
+
+## quickfixes
+alias start-plasma='kstart5 plasmashell'
+
+## pacman 
+alias rm-orphans='pacman -Qtdq | sudo pacman -Rns -'
+
+## ls options
+alias lss='ls -sShAr'
+alias ll='ls -alF'
+alias la='ls -A'
+alias li='ls --ignore=LICENSE --ignore=README.md --ignore=Makefile'
+alias l='ls -CF'
+alias lsi='printf "\n" && lsd -XF --ignore-glob=LICENSE --ignore-glob=README.md --ignore-glob=Makefile && printf "\n"'
+alias ldl='ls ~/Downloads -tl | head'
+
+
+## systemd
+alias susy='sudo systemctl'
+alias suse='sudo systemctl enable'
+alias susd='sudo systemctl disable'
+alias sus0='sudo systemctl stop'
+alias sus1='sudo systemctl start'
+    
+## make
+alias mt='make test'
+alias me='make exec'
+alias ma='make all'
+alias mc='make clean'
+
+## git
+alias gl='git log'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+
+
+## xdg-ninja
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings"'
+alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+
+## full commands
+alias diskhealth='sudo smartctl -a /dev/nvme0n1 | grep TB && echo "Max.-TBW: 600"'
+alias jackvid='mpv -ao jack'
+alias qr-screen-scan='scrot /tmp/qr.png && zbarimg /tmp/qr.png && rm /tmp/qr.png'
+alias codedir="cd \$CODEDIR" #config in ~/.profile
+alias wsens='watch -n1 sensors'
+alias openports='sudo ss -nutlp | grep LISTEN'
+alias wiki="nvim ~/Dokumente/VimWiki/index.md"
+alias rootdu="sudo ncdu -x / --exclude /home"
+alias projcd='cd $(project-select)'
+alias projnv='nvim $(project-select)'
+alias faststart='uvicorn main:app --reload'
+
+## configs
+alias vimrc='nvim ~/.config/nvim/init.lua'
+alias bashrc="\$EDITOR ~/.bashrc" #confg in ~/.profile
+
+## overwrites
+alias ls='ls --color=auto'
+alias lsblk='lsblk -f'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+
+## keep or sweep
+alias start-pulse="sudo systemctl --user restart pulseaudio"
+alias arch-releases='w3m https://archlinux.org/releng/releases/ | tail -n +24 | head'
+alias arch-iso="w3m https://archlinux.org/releng/releases/ | tail -n +24 | head | grep -i torrent | head -1 | cut -d' ' -f9"
+alias move-isos="find \$HOME/ -type f -name "*.iso" -exec mv '{}' \$HOME/.local/iso/. \;"

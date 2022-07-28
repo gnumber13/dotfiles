@@ -1,0 +1,12 @@
+-- --------------------------- user modules -------------------------------------
+-- ./plugins/init.lua
+ require "gnumber13.plugins"
+-- ./theming/init.lua
+require "gnumber13.theming"
+-- ./filetype-settings/init.lua
+ require "gnumber13.filetype-settings"
+-- ./myfunctions/init.lua
+ myfuns = require "gnumber13.myfunctions"
+-- ./keymappings/init.lua
+ require "gnumber13.keymappings"
+-- -----------------------------------------------------------------------------
