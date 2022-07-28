@@ -7,7 +7,6 @@
 [ -f "$HOME/.profile" ] && . "$HOME/.profile"
 
 
-
 # source files
 . "$HOME/.config/bashrc.d/aliases"
 . "$HOME/.config/bashrc.d/functions"
