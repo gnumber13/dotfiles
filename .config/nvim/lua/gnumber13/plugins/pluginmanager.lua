@@ -10,6 +10,7 @@ require "paq" {
         'windwp/windline.nvim';
 
     -- functionality
+        'tpope/vim-fugitive';
         'SirVer/ultisnips';
         { 
             'akinsho/bufferline.nvim',
