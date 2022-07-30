@@ -53,7 +53,7 @@ vim.cmd('iabbrev cmain int main () {<CR><CR>}<Esc>ki')
 -- Snippy
 -- vim.api.nvim_set_keymap(''
 -- Goyo
-vim.api.nvim_set_keymap('n', 'go', ':Goyo<CR>:set wrap<CR>', noremap)
+vim.api.nvim_set_keymap('n', 'go', ':Goyo<CR>:set wrap<CR>:set linebreak<CR>', noremap)
 vim.api.nvim_set_keymap('n', 'yo', ':Goyo!<CR>:set nowrap<CR>', noremap)
 
 -- "" example

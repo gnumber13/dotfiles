@@ -28,8 +28,6 @@ set fileformats=unix,dos,mac
 "set clipboard=unnamed
 
 
-
-
 "set path+=**
 set wildmenu
 

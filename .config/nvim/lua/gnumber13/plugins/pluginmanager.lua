@@ -8,6 +8,7 @@ require "paq" {
         'sainnhe/sonokai';
         -- 'itchyny/lightline.vim';
         'windwp/windline.nvim';
+        -- 'lewis6991/gitsigns.nvim'; -- for git support for windline
 
     -- functionality
         'tpope/vim-fugitive';
@@ -32,7 +33,8 @@ require "paq" {
         -- 'preservim/nerdtree';
 
     -- webdev
-        'ap/vim-css-color';
+        --'ap/vim-css-color';
+        'norcalli/nvim-colorizer.lua';
         'mattn/emmet-vim';
 
 --    {'nvim-treesitter/nvim-treesitter', run=vim.fn[':TSUpdate']};--  " We recommend updating the parsers on update
