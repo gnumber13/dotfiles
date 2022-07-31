@@ -44,6 +44,7 @@ alias ma='make all'
 alias mc='make clean'
 
 ## git
+alias 'git_init'='git init -b main'
 alias gl='git log'
 alias gs='git status'
 alias ga='git add'
