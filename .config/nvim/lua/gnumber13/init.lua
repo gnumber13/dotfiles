@@ -11,6 +11,8 @@ myfuns = require "gnumber13.myfunctions"
 require "gnumber13.keymappings"
 -- ./sessions/init.lua
 sess = require "gnumber13.sessions"
+-- ./options/init.lua
+require "gnumber13.options"
 -- -----------------------------------------------------------------------------
 
 -- ------------------------------- functions -----------------------------------

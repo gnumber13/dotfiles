@@ -1,6 +1,7 @@
 local M = {}
 
 vim.g.sessionDir = "$XDG_STATE_HOME/nvim/sessions/"
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize"
 
 function dirLookup(dir)
    local p = io.popen('find "'..dir..'" -type f')  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.     

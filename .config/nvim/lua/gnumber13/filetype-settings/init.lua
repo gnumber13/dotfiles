@@ -45,16 +45,3 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter", "TabEnter"}, {
 vim.api.nvim_create_autocmd({"TermOpen"}, {
     callback = no_line_numbers
 })
--- 
--- vim.api.nvim_create_autocmd({"WinEnter"}, {
-    -- pattern = { "term://*" },
-    -- command = "<Esc>:echo entered terminal"
--- })
--- vim.api.nvim_create_autocmd({"WinLeave"}, {
-    -- pattern = { "term://*" },
-    -- command = "<Esc>:echo left terminal"
--- })
-
---vim.api.nvim_create_autocmd({"TerminalOpen", "TerminalWinOpen"}, {
---    callback = no_line_numbers
---})
