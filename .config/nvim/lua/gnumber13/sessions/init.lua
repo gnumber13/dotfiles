@@ -1,6 +1,14 @@
 local M = {}
 
-vim.g.sessionDir = "$XDG_STATE_HOME/nvim/sessions/"
+xdg_state = io.popen("echo $XDG_STATE_HOME")
+
+if not (xdg_state == "" )
+then
+    vim.g.sessionDir = "$XDG_STATE_HOME/nvim/sessions/"
+else
+    vim.g.sessionDir = "./sessions/"
+end
+
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize"
 
 function dirLookup(dir)
