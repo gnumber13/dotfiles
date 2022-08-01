@@ -8,6 +8,7 @@ function M.dirLookup(dir)
    for file in p:lines() do                         --Loop through all files
        print(file)       
    end
+   p:close()
 end
 
 function M.source_vimscripts (...)
@@ -17,6 +18,12 @@ function M.source_vimscripts (...)
         local source_cmd = "source $HOME/.config/nvim/vimscript/"
         vim.cmd(source_cmd .. file)
     end
+end
+
+function M.itemsInDir(dir)
+    local p = io.popen('la -A1 "' ..dir.. '" | wc -l')
+    print(p:read("*a"))
+    p:close()
 end
 
 function M.print_table (tbl)
