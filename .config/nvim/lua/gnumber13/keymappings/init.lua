@@ -81,6 +81,12 @@ vim.api.nvim_set_keymap('n', 'glt', ':VimwikiChangeSymbolTo - [ ]<CR>', noremap)
 -- set <leader> to ','
 vim.g.mapleader = ","
 
+-- nduco
+vim.api.nvim_set_keymap('n', '<Leader>ad', '<cmd>lua sess.detach()<CR>', noremap)
+vim.api.nvim_set_keymap('n', '<Leader>aa', '<cmd>lua sess.attach()<CR>', noremap)
+vim.api.nvim_set_keymap('n', '<Leader>ss', '<cmd>lua sess.SaveSession()<CR>', noremap)
+vim.api.nvim_set_keymap('n', '<Leader>lss', '<cmd>lua sess.ListSessions()<CR>', noremap)
+
 -- goto buffer
 vim.api.nvim_set_keymap('n', '<Leader>1', '<cmd>b1<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<Leader>2', '<cmd>b2<CR>', noremap)

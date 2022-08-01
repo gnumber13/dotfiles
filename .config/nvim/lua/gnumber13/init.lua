@@ -9,6 +9,8 @@ require "gnumber13.filetype-settings"
 myfuns = require "gnumber13.myfunctions"
 -- ./keymappings/init.lua
 require "gnumber13.keymappings"
+-- ./sessions/init.lua
+sess = require "gnumber13.sessions"
 -- -----------------------------------------------------------------------------
 
 -- ------------------------------- functions -----------------------------------

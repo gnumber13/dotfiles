@@ -11,6 +11,7 @@ require "paq" {
         -- 'lewis6991/gitsigns.nvim'; -- for git support for windline
 
     -- functionality
+----        'natecraddock/sessions.nvim';
         'tpope/vim-fugitive';
         'SirVer/ultisnips';
         { 

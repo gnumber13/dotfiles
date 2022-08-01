@@ -17,6 +17,14 @@ augroup vimrc-remember-cursor-position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 augroup END
 
+function! Demo()
+  let curline = getline('.')
+  call inputsave()
+  let name = input('Enter name: ')
+  call inputrestore()
+  call setline('.', curline . ' ' . name)
+endfunction
+
 augroup journal
     autocmd VimEnter */Journal/** setlocal complete=k$HOME/Dokumente/Journal/**
     autocmd VimEnter */Journal/** 0r /tmp/journal.md

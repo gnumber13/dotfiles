@@ -1,5 +1,14 @@
 local M = {}
+io = require "io"
 json = require "json"
+
+function M.dirLookup(dir)
+-- from: https://stackoverflow.com/questions/5303174/how-to-get-list-of-directories-in-lua -- 
+   local p = io.popen('find "'..dir..'" -type f')  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.     
+   for file in p:lines() do                         --Loop through all files
+       print(file)       
+   end
+end
 
 function M.source_vimscripts (...)
     local args = {...}
@@ -46,6 +55,10 @@ function M.get_keymaps(mode)
     end
 
     --local json_table = json.encode_table(var)
+end
+function M.userinput()
+    local fname = vim.fn.input("File: ", "", "file")
+    print(fname)
 end
 
 -- function M.buf_plus_one ()

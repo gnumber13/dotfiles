@@ -4,9 +4,11 @@
 
 # system shortcuts
 ## simple
-alias vim='nvim'
 alias e='nvim'
+alias vim='nvim'
+alias vi='nvim'
 alias se='sudo nvim'
+alias nduco="nvim -S $XDG_STATE_HOME/nvim/sessions/detach_session"
 alias SS='sudo systemctl'
 alias dl='aria2c -d ~/Downloads'
 alias cl='clear'
