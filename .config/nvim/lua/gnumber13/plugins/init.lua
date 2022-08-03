@@ -13,7 +13,8 @@ require "gnumber13.plugins.vimwiki"
 require "gnumber13.plugins.ultisnips"
 -- ./bufferline.lua
 require "gnumber13.plugins.bufferline"
--- ./windline.lua
+-- ./windline/init.lua
+-- ./windline/windline.lua
 require "gnumber13.plugins.windline"
 -- -----------------------------------------------------------------------------
 
