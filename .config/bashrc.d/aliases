@@ -2,11 +2,20 @@
 
 # sourced by ~/.bashrc
 
-# system shortcuts
-## simple
-alias e='nvim'
+# overwrites
+alias wl-copy='wl-copy --trim-newline'
 alias vim='nvim'
 alias vi='nvim'
+alias ls='ls --color=auto'
+alias lsblk='lsblk -f'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# system shortcuts
+## simple
+alias lh="echo 'curl localhost:8085 > install.sh && bash install.sh'"
+alias e='nvim'
 alias se='sudo nvim'
 alias nduco="nvim -S $XDG_STATE_HOME/nvim/sessions/detach_session"
 alias SS='sudo systemctl'
@@ -75,12 +84,6 @@ alias faststart='uvicorn main:app --reload'
 alias vimrc='nvim ~/.config/nvim/init.lua'
 alias bashrc="\$EDITOR ~/.bashrc" #confg in ~/.profile
 
-## overwrites
-alias ls='ls --color=auto'
-alias lsblk='lsblk -f'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 
 
 
