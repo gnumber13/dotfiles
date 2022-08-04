@@ -144,6 +144,20 @@ vim.api.nvim_set_keymap('n', '<leader>tx', 'iexit<CR>', noremap)
 
 vim.api.nvim_set_keymap('n', '<leader>xp', '<C-w><C-_>', noremap)
 vim.api.nvim_set_keymap('n', '<leader>ct', '<C-w><C-_>:resize -10<CR>', noremap)
+
+-- change directories
+-- globally
+vim.api.nvim_set_keymap('n', '<leader><leader>gcd', [[:cd %:p:h<CR>]], noremap) 
+-- per window
+vim.api.nvim_set_keymap('n', '<leader><leader>cd', [[:lcd %:p:h<CR>]], noremap)
+
+
+-- fugitive
+vim.api.nvim_set_keymap('n', '<leader>gadd', ':G add .<CR>', noremap)
+vim.api.nvim_set_keymap('n', '<leader>gcmt', ':G commit -m "', noremap)
+vim.api.nvim_set_keymap('n', '<leader>push', ':G push<CR>', noremap)
+
+
 -- vim.api.nvim_set_keymap('n', '<leader>te', '', nomemap)
 -- vim.api.nvim_set_keymap('n', 'tt', ':vs<Return><C-w>w:terminal<Return>i', noremap)
 -- 

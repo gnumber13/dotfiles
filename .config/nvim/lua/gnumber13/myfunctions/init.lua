@@ -11,6 +11,24 @@ function M.dirLookup(dir)
    p:close()
 end
 
+function M.cd_to_buffer()
+    --curr_buffnum=
+    --full_buffpath=vim.api.nvim_get_buf_name
+    --print(buff_dir)
+    -- vim.api.nvim_set_current_dir(buff_dir)
+end
+
+function M.nvim_buf_get_dir(buffnum)
+    local x = vim.api.nvim_buf_get_name(buffnum)
+
+    var = string.gmatch(x, "[^/]*/") 
+
+    for i in var do
+        print(i)
+    end
+
+    
+end
 function M.source_vimscripts (...)
     local args = {...}
 
