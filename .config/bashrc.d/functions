@@ -31,3 +31,13 @@ mked () {
 mockdb_conn () {
     psql -d mockdb -h localhost -p 5434 admin
 }
+
+
+run_image () {
+	image_name="$1"
+	podman run -it --network=host --entrypoint=/bin/bash "$image_name"
+}
+build_image () {
+	image_name="$1"
+	podman build -t "localhost/$1" ./
+}

@@ -7,7 +7,8 @@ require "paq" {
         'cocopon/iceberg.vim';
         'sainnhe/sonokai';
         -- 'itchyny/lightline.vim';
-        'windwp/windline.nvim';
+--        'windwp/windline.nvim';
+		'nvim-lualine/lualine.nvim';
         -- 'lewis6991/gitsigns.nvim'; -- for git support for windline
 
     -- functionality

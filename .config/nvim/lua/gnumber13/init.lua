@@ -1,4 +1,6 @@
 -- --------------------------- user modules -------------------------------------
+-- ./options/init.lua
+require "gnumber13.options"
 -- ./plugins/init.lua
 require "gnumber13.plugins"
 -- ./theming/init.lua
@@ -11,13 +13,12 @@ myfuns = require "gnumber13.myfunctions"
 require "gnumber13.keymappings"
 -- ./sessions/init.lua
 sess = require "gnumber13.sessions"
--- ./options/init.lua
-require "gnumber13.options"
 -- -----------------------------------------------------------------------------
 
 -- ------------------------------- functions -----------------------------------
 myfuns.source_vimscripts(
        -- "tmp.vim", -- for vim settings waiting to be migrated
+       -- ../../vimscript/settings.vim
         "settings.vim")
 
 print_table = myfuns.print_table

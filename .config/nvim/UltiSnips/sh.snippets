@@ -1,0 +1,57 @@
+snippet  _test
+[ ${1: comp1} ${2: operator} ${3: com2}  ]
+endsnippet
+
+snippet _check
+[ ${1: check} ${2: var} ]
+endsnippet
+
+snippet  _testn
+[ ! ${1: comp1} ${2: operator} ${3: com2}  ]
+endsnippet
+
+snippet _checkn
+[ ! ${1: check} ${2: var} ]
+endsnippet
+
+snippet  _if
+if [ ${1: comp1} ${2: operator} ${3: com2} ]; then
+	${4: command}
+fi
+endsnippet
+
+snippet  _ifn
+if [ ! ${1: comp1} ${2: operator} ${3: com2} ]; then
+	${4: command}
+fi
+endsnippet
+
+snippet  _fn
+${1: functionname} () {
+	${2: codeblock}
+}
+endsnippet
+
+snippet _flags
+# first argument is positional
+# ./cmd.sh input [Options ...]
+argv1 = "$1"
+
+for flag in "$@"; do
+	case "$flag" in
+		'${1:flag1}'*) # with arg? then use '*' after
+			${2: codeblock}
+		;;
+		'${3:flag2}') # no arg? then don't use '*' after
+			${4: codeblock}
+		;;
+		'${5:flag3}'|'${6:flag3short}') # chain them with | 
+			${7: codeblock}
+		;;
+		*)
+			break
+		;;
+	esac
+done
+			
+endsnippet

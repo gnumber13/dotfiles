@@ -15,6 +15,9 @@ require "gnumber13.plugins.ultisnips"
 require "gnumber13.plugins.bufferline"
 -- ./windline/init.lua
 -- ./windline/windline.lua
-require "gnumber13.plugins.windline"
+-- require "gnumber13.plugins.windline"
+--
+-- ./lualine.lua
+ require "gnumber13.plugins.lualine"
 -- -----------------------------------------------------------------------------
 

@@ -2,7 +2,7 @@ local M = {}
 io = require "io"
 json = require "json"
 
-function M.dirLookup(dir)
+function M.dir_lookup(dir)
 -- from: https://stackoverflow.com/questions/5303174/how-to-get-list-of-directories-in-lua -- 
    local p = io.popen('find "'..dir..'" -type f')  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.     
    for file in p:lines() do                         --Loop through all files
@@ -12,10 +12,58 @@ function M.dirLookup(dir)
 end
 
 function M.cd_to_buffer()
-    --curr_buffnum=
-    --full_buffpath=vim.api.nvim_get_buf_name
-    --print(buff_dir)
-    -- vim.api.nvim_set_current_dir(buff_dir)
+    buffnum = vim.api.nvim_get_current_buf()
+    full_buffpath = vim.api.nvim_buf_get_name(buffnum)
+
+    if not (full_buffpath == "") and not (freeze_root == true) then
+        buff_dir = fullpath_to_dir(full_buffpath)
+        vim.api.nvim_set_current_dir(buff_dir)
+    end
+end
+
+function M.freeze_root_toggle() 
+	buffnum = vim.api.nvim_get_current_buf()
+    full_buffpath = vim.api.nvim_buf_get_name(buffnum)
+
+	if (freeze_root == false) or (freeze_root == nil) then
+		freeze_root = true
+		print("freezing root to: " .. fullpath_to_dir(full_buffpath))
+	elseif (freeze_root == true) then
+		freeze_root = false
+		print("autoroot reenabled")
+	end
+
+end
+
+function fullpath_to_filename (fullpath)
+    local rev_fullpath = string.reverse(fullpath)
+    local rev_split_text = string.gmatch(rev_fullpath, "[^/]+")
+
+    for rev_lvl in rev_split_text do
+        rev_filname = rev_lvl
+        break
+    end
+
+    output = string.reverse(rev_filname)
+    return(output)
+end
+
+function fullpath_to_dir (fullpath)
+    local fullpath = string.reverse(fullpath)
+    local split_text = string.gmatch(fullpath, "[^/]+")
+
+    local i = 1
+    local concat = ""
+    for lvl in split_text do
+        if i >= 2 then
+            concat = concat .. lvl .. "/"
+            --print(split_text[1])
+        end
+        i = i + 1 
+    end
+
+    output = string.reverse(concat)
+    return(output)
 end
 
 function M.nvim_buf_get_dir(buffnum)
