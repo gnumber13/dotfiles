@@ -9,7 +9,7 @@
 -- ./tokyodefault.lua
 -- require 'theming.tokyodefault'
 -- ./iceberg.lua
--- require "theming.iceberg"
+-- require "gnumber13.theming.iceberg"
 -- --------------------------
 
 

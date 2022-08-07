@@ -149,6 +149,8 @@ vim.api.nvim_set_keymap('n', '<leader>tx', 'iexit<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<leader>xp', '<C-w><C-_>', noremap)
 vim.api.nvim_set_keymap('n', '<leader>ct', '<C-w><C-_>:resize -10<CR>', noremap)
 
+vim.api.nvim_set_keymap('v', '<leader>cb', 'c<Esc>I```<CR>```<Esc>P', noremap)
+
 -- change directories
 -- globally
 vim.api.nvim_set_keymap('n', '<leader><leader>gcd', [[:cd %:p:h<CR>]], noremap) 

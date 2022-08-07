@@ -1,14 +1,24 @@
 fns = require "gnumber13.myfunctions"
 -- vim.opt.foldmethod = 'indent'
 
+function on_term_open () 
+	ignore_autoroot_whith_terminal = true
+end
+
 ------------------ autocmds ----------------------------------
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = {"term://*"},
+    callback = on_term_open,  -- Or myvimfun
+})
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    group = vim.api.nvim_create_augroup("autoroot", { clear = true }),
     pattern = {"*"},
     callback = fns.cd_to_buffer,  -- Or myvimfun
 })
 
+vim.api.nvim_create_autocmd({"VimLeave", "ExitPre"}, {
+	command = '<cmd>!echo "background_opacity 0.95" > $HOME/.config/kitty/opacity.conf && kill -SIGUSR1 $(pgrep kitty)'
+})
 ---------------------------------------------------------------
 -- vim.cmd('syntax enable')
 -- vim.cmd('filetype plugin indent on')
@@ -17,7 +27,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.bo.expandtab = true
 
---vim.o.encoding = "utf-8"
+vim.o.encoding = "utf-8"
 vim.o.fileencoding = "utf-8"
 vim.o.fileencodings = "utf-8"
 

@@ -1,7 +1,7 @@
 function no_line_numbers()
     vim.opt.number = false
     vim.opt.relativenumber = false
-    vim.cmd([[:resize 10<CR>]])
+    --vim.cmd([[:resize 10<CR>]])
 end
 
 function set_compact_formatting()
@@ -42,6 +42,8 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter", "TabEnter"}, {
     pattern = { "*.lua" },
     command = "set syntax=lua"
 })
+
 vim.api.nvim_create_autocmd({"TermOpen"}, {
     callback = no_line_numbers
 })
+

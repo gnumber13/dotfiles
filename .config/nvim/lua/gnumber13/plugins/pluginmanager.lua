@@ -35,8 +35,8 @@ require "paq" {
         -- 'preservim/nerdtree';
 
     -- webdev
-        --'ap/vim-css-color';
-        'norcalli/nvim-colorizer.lua';
+        'ap/vim-css-color';
+        --'norcalli/nvim-colorizer.lua';
         'mattn/emmet-vim';
 
 --    {'nvim-treesitter/nvim-treesitter', run=vim.fn[':TSUpdate']};--  " We recommend updating the parsers on update

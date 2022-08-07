@@ -12,9 +12,21 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# reload kitty
+alias kittyup='kill -SIGUSR1 $(pgrep kitty)'
+
+kitty_opaque () {
+	echo "background_opacity 1" > $HOME/.config/kitty/opacity.conf
+	kill -SIGUSR1 $(pgrep kitty)
+#	nvim "$@"
+}
+kitty_trans () {
+	echo "background_opacity 0.97" > $HOME/.config/kitty/opacity.conf
+	kill -SIGUSR1 $(pgrep kitty)
+}
+
 # system shortcuts
 ## simple
-alias lh="echo 'curl localhost:8085 > install.sh && bash install.sh'"
 alias e='nvim'
 alias se='sudo nvim'
 alias nduco="nvim -S $XDG_STATE_HOME/nvim/sessions/detach_session"

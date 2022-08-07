@@ -15,7 +15,10 @@ function M.cd_to_buffer()
     buffnum = vim.api.nvim_get_current_buf()
     full_buffpath = vim.api.nvim_buf_get_name(buffnum)
 
-    if not (full_buffpath == "") and not (freeze_root == true) then
+    if not (full_buffpath == "") 
+		and not (freeze_root == true) 
+		and not (ignore_autoroot_whith_terminal == true) 
+	then
         buff_dir = fullpath_to_dir(full_buffpath)
         vim.api.nvim_set_current_dir(buff_dir)
     end

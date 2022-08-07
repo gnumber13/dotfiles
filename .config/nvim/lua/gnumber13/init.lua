@@ -16,6 +16,14 @@ sess = require "gnumber13.sessions"
 -- -----------------------------------------------------------------------------
 
 -- ------------------------------- functions -----------------------------------
+--
+
+local os = require "os"
+
+command = 'echo "background_opacity 1.0" > $HOME/.config/kitty/opacity.conf && kill -SIGUSR1 $(pgrep kitty)'
+os.execute('echo hello')
+-- sh.command('')
+
 myfuns.source_vimscripts(
        -- "tmp.vim", -- for vim settings waiting to be migrated
        -- ../../vimscript/settings.vim
