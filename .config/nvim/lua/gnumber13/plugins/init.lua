@@ -9,15 +9,11 @@ require "gnumber13.plugins.pluginmanager"
 require "gnumber13.plugins.markdown-preview"
 -- ./vimwiki.lua
 require "gnumber13.plugins.vimwiki"
--- ./ultisnips.lua
-require "gnumber13.plugins.ultisnips"
+-- ./luasnip.lua
+require "gnumber13.plugins.luasnip"
 -- ./bufferline.lua
 require "gnumber13.plugins.bufferline"
--- ./windline/init.lua
--- ./windline/windline.lua
--- require "gnumber13.plugins.windline"
---
 -- ./lualine.lua
- require "gnumber13.plugins.lualine"
+require "gnumber13.plugins.lualine"
 -- -----------------------------------------------------------------------------
 

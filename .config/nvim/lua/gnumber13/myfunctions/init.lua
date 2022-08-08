@@ -1,4 +1,5 @@
 local M = {}
+
 io = require "io"
 json = require "json"
 
@@ -9,6 +10,26 @@ function M.dir_lookup(dir)
        print(file)       
    end
    p:close()
+end
+
+function M.win_horizontal_resize(delta)
+	delta = tonumber(delta)
+	local current_window = 0
+
+	local current_width = vim.api.nvim_win_get_width(current_window)
+	local target_width = current_width + delta
+	
+	vim.api.nvim_win_set_width(current_window, target_width)
+end
+
+function M.win_vertical_resize(delta)
+	delta = tonumber(delta)
+	local current_window = 0
+
+	local current_height = vim.api.nvim_win_get_height(current_window)
+	local target_height = current_height + delta
+	
+	vim.api.nvim_win_set_height(current_window, target_height)
 end
 
 function M.cd_to_buffer()

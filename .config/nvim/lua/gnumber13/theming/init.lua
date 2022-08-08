@@ -11,9 +11,3 @@
 -- ./iceberg.lua
 -- require "gnumber13.theming.iceberg"
 -- --------------------------
-
-
--- ------- options ----------
--- enable termguicolors
-vim.o.termguicolors = true
--- --------------------------

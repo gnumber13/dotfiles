@@ -1,5 +1,4 @@
 local M = {}
-
 xdg_state = io.popen("echo $XDG_STATE_HOME")
 
 if not (xdg_state == "" )

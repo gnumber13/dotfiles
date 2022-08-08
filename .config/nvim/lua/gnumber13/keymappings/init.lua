@@ -3,8 +3,9 @@ remap = { noremap = false }
 -- ---------------------------- Macro Recipies --------------------------------
 -- f$i"jjwwbwbea" -- encase bash var in doublequotes (must start before variable on the line)
 -- ----------------------------------------------------------------------------
-
+ 
 -- --------------------------- Function Keys ----------------------------------
+-- {{{1
 -- don't remap F11 and F12
 -- any mode
     -- execute last ex command
@@ -18,6 +19,7 @@ remap = { noremap = false }
     vim.api.nvim_set_keymap('n', '<F8>', [[:bprev<CR>]], noremap)
     vim.api.nvim_set_keymap('n', '<backspace><CR>', [[:bprev<CR>]], noremap)
     vim.api.nvim_set_keymap('n', '<F9>', [["+p]], noremap) -- :checkhealth for clipboard provider
+	-- {{{2
     -- vim.api.nvim_set_keymap('n', 'p', [["xp]], noremap)
     -- vim.api.nvim_set_keymap('n', 'P', [["xP]], noremap)
     -- vim.api.nvim_set_keymap('n', 'Y', [["xY]], noremap)  -- yy is mapped to Y
@@ -27,35 +29,67 @@ remap = { noremap = false }
     -- vim.api.nvim_set_keymap('n', 'cc', [[^"xC]], noremap)  -- yy is mapped to Y
     -- vim.api.nvim_set_keymap('n', 'Y', [["xY]], noremap)  -- yy is mapped to Y
     -- vim.api.nvim_set_keymap('n', 'Y', [["xY]], noremap)  -- yy is mapped to Y
+	-- }}}2
 
 -- 
 -- -- visual mode
     vim.api.nvim_set_keymap('v', '<F9>', [["+y]], noremap)
     vim.api.nvim_set_keymap('v', 'y', [["xy]], noremap)
 
+-- }}}1
 -- ----------------------------------------------------------------------------
 
 -- -------------------------- abbreviations -----------------------------------
+-- {{{1
 vim.cmd('iabbrev _hi Hello World ')
 vim.cmd('iabbrev _sh #!/bin/sh')
-vim.cmd('iabbrev _incl #include <')
-vim.cmd('iabbrev _bats #!/usr/bin/env bats')
-vim.cmd('iabbrev _bats_test @test "" {<CR><TAB><CR>}<Esc>2k^f"')
+--vim.cmd('iabbrev _incl #include <')
+--vim.cmd('iabbrev _bats #!/usr/bin/env bats')
+--vim.cmd('iabbrev _bats_test @test "" {<CR><TAB><CR>}<Esc>2k^f"')
 -- vim.cmd('iabbrev ``` ```<CR><CR>```<Esc>ki')
 -- vim.cmd('iabbrev ``` ``````')
 vim.cmd('iabbrev tex $$<CR><CR>$$<Esc>ki')
 vim.cmd('iabbrev cmain int main () {<CR><CR>}<Esc>ki')
+-- }}}1
 ----------------------------------------------------------------------------
-
-
-
 ------------------ For plugins: --------------------------------------------
--- Snippy
--- vim.api.nvim_set_keymap(''
+-- {{{1
+-- {{{2
+-- luasnip
+-- press <Tab> to expand or jump in a snippet. These can also be mapped separately
+-- via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
+--vim.api.nvim_set_keymap('i', '<silent><expr> <Tab>', [[luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>']], { 'remap': v:true, 'silent': v:true, 'expr': v:true  })
+
+-- -1 for jumping backwards.
+--vim.api.nvim_set_keymap('i', '<silent> <S-Tab>', [[<cmd>lua require'luasnip'.jump(-1)<Cr>]], noremap)
+--vim.api.nvim_set_keymap('s', '<silent> <Tab>', [[<cmd>lua require('luasnip').jump(1)<Cr>]], noremap)
+--vim.api.nvim_set_keymap('s',  '<silent> <S-Tab>', [[<cmd>lua require('luasnip').jump(-1)<Cr>]], noremap)
+
+-- For changing choices in choiceNodes (not strictly necessary for a basic set_up).
+--vim.api.nvim_set_keymap('i',  '<silent><expr> <C-E>', [[luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>']],remap)
+--vim.api.nvim_set_keymap('s', '<silent><expr> <C-E>', [[luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>']], remap)
+--}}}2
+
+-- LuaSnip
+--  press <Tab> to expand or jump in a snippet. These can also be mapped separately
+--  via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
+vim.cmd([[imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' ]])
+--  -1 for jumping backwards.
+vim.cmd([[inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>]])
+
+vim.cmd([[snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>]])
+vim.cmd([[snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>]])
+
+--  For changing choices in choiceNodes (not strictly necessary for a basic setup).
+vim.cmd([[imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>']])
+vim.cmd([[smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>']])
+
+
 -- Goyo
 vim.api.nvim_set_keymap('n', 'go', ':Goyo<CR>:set wrap<CR>:set linebreak<CR>', noremap)
 vim.api.nvim_set_keymap('n', 'yo', ':Goyo!<CR>:set nowrap<CR>', noremap)
 
+-- MarkdownPreview
 -- "" example
 vim.cmd('nmap <C-s> <Plug>MarkdownPreview')
 vim.cmd('nmap <M-s> <Plug>MarkdownPreviewStop')
@@ -65,19 +99,21 @@ vim.api.nvim_set_keymap('n', '<C-s>', '<Plug>MarkdownPreview<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<M-s>', '<Plug>MarkdownPreviewStop<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<C-p>', '<Plug>MarkdownPreviewToggle<CR>', noremap)
 
+-- VimWiki
 vim.api.nvim_set_keymap('v', '<Leader>tl', '<Plug>VimwikiToggleListItem', noremap)
 vim.api.nvim_set_keymap('n', '<Leader>tl', '<Plug>VimwikiToggleListItem', noremap)
 vim.api.nvim_set_keymap('n', 'glo', ':VimwikiChangeSymbolTo a)<CR>', noremap)
 vim.api.nvim_set_keymap('n', 'gld', ':VimwikiChangeSymbolTo - <CR>', noremap)
 vim.api.nvim_set_keymap('n', 'gla', ':VimwikiChangeSymbolTo * <CR>', noremap)
 vim.api.nvim_set_keymap('n', 'glt', ':VimwikiChangeSymbolTo - [ ]<CR>', noremap)
+-- }}}1
+-- ----------------------------------------------------------------------------
+-- ----------------------- markers --------------------------------------------
+vim.api.nvim_set_keymap('n', 'ö', '`', noremap)
 -- ----------------------------------------------------------------------------
 
 -- ----------------------- leader commands ------------------------------------
-
-
-
-
+-- {{{1
 -- set <leader> to ','
 vim.g.mapleader = ","
 
@@ -98,14 +134,13 @@ vim.api.nvim_set_keymap('n', '<Leader>7', '<cmd>b7<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<Leader>8', '<cmd>b8<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<Leader>9', '<cmd>b9<CR>', noremap)
 
-
-
 -- Close buffer
 vim.api.nvim_set_keymap('', '<leader>d', ':bd<CR>', noremap)
 
 -- vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap('', '<F3>', ':Lex<CR>', noremap)
-vim.api.nvim_set_keymap('', '<M-down>', [[:resize +3<CR>]], noremap)
+
+
 vim.api.nvim_set_keymap('', '<leader>sv', [[:resize -3<CR>]], noremap)
 vim.api.nvim_set_keymap('', '<leader>sh', [[<C-w>3<>]], noremap)
 vim.api.nvim_set_keymap('', '<leader>gh', [[<Cw>3>]], noremap)
@@ -132,13 +167,17 @@ vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', nore
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', noremap)
 vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', noremap)
 
-
-
 vim.api.nvim_set_keymap('n', '<leader>fr', '<cmd>lua myfuns.freeze_root_toggle()<CR>', noremap)
+-- }}}1
 -- ----------------------------------------------------------------------------
-
-
 -- -------------------------- unsorted ----------------------------------------
+-- {{{1
+
+vim.api.nvim_set_keymap('', '<M-->', '<cmd>lua myfuns.win_vertical_resize(-3)<CR>', noremap)
+vim.api.nvim_set_keymap('', '<M-+>', '<cmd>lua myfuns.win_vertical_resize(3)<CR>', noremap)
+vim.api.nvim_set_keymap('', '<S-M-->', '<cmd>lua myfuns.win_horizontal_resize(-6)<CR>', noremap)
+vim.api.nvim_set_keymap('', '<S-M-+>', '<cmd>lua myfuns.win_horizontal_resize(6)<CR>', noremap)
+
 -- normal mode
 vim.api.nvim_set_keymap('n', '<Enter>', 'gf', noremap)
 -- -- open terminal right
@@ -179,6 +218,5 @@ vim.cmd([[tnoremap jj <C-\><C-n>]])
 -- -- Vmap for maintain Visual Mode after shifting > and <
 vim.api.nvim_set_keymap('v', '<', '<gv', remap)
 vim.api.nvim_set_keymap('v', '>', '>gv', remap)
-
-
+-- }}}1
 -- ----------------------------------------------------------------------------

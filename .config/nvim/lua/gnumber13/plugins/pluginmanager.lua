@@ -2,28 +2,29 @@ require "paq" {
 	"savq/paq-nvim";                  -- Let Paq manage itself
 	--    "neovim/nvim-lspconfig";          -- Mind the semi-colons
 	--    "hrsh7th/nvim-cmp";
+	
     -- themes 
+		'kshenoy/vim-signature';
         'folke/tokyonight.nvim'; 
         'cocopon/iceberg.vim';
         'sainnhe/sonokai';
-        -- 'itchyny/lightline.vim';
---        'windwp/windline.nvim';
-		'nvim-lualine/lualine.nvim';
+      
         -- 'lewis6991/gitsigns.nvim'; -- for git support for windline
 
     -- functionality
-----        'natecraddock/sessions.nvim';
-        'tpope/vim-fugitive';
-        'SirVer/ultisnips';
+		
         { 
-            'akinsho/bufferline.nvim',
-            tag = "v2.*", 
+			'akinsho/bufferline.nvim', tag = "v2.*", 
             requires = 'kyazdani42/nvim-web-devicons' 
         };
 
+        'tpope/vim-fugitive';
         'tpope/vim-surround';
         'neovim/nvim-lspconfig';
+		'phaazon/hop.nvim';
 
+		'nvim-lualine/lualine.nvim';
+		'L3MON4D3/LuaSnip';
         -- for telescope
         'nvim-lua/plenary.nvim';
         'nvim-telescope/telescope.nvim';
@@ -32,12 +33,13 @@ require "paq" {
         { 'iamcco/markdown-preview.nvim', 
             run = 'yarn install' };
         'junegunn/goyo.vim';
-        -- 'preservim/nerdtree';
 
     -- webdev
         'ap/vim-css-color';
-        --'norcalli/nvim-colorizer.lua';
         'mattn/emmet-vim';
 
---    {'nvim-treesitter/nvim-treesitter', run=vim.fn[':TSUpdate']};--  " We recommend updating the parsers on update
+-- {'nvim-treesitter/nvim-treesitter', run=vim.fn[':TSUpdate']};--  " We recommend updating the parsers on update
+--'norcalli/nvim-colorizer.lua';
+--'SirVer/ultisnips';
+-- 'preservim/nerdtree';
 }
