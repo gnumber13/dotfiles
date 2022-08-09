@@ -6,6 +6,7 @@ function on_term_open ()
 end
 
 ------------------ autocmds ----------------------------------
+-- {{{1
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = {"term://*"},
     callback = on_term_open,  -- Or myvimfun
@@ -19,10 +20,13 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 --vim.api.nvim_create_autocmd({"VimLeave", "ExitPre"}, {
 --	command = '<cmd>!echo "background_opacity 0.95" > $HOME/.config/kitty/opacity.conf && kill -SIGUSR1 $(pgrep kitty)'
 --})
+-- }}}1
 ---------------------------------------------------------------
+
 -- vim.cmd('syntax enable')
 -- vim.cmd('filetype plugin indent on')
-
+-- ----------------------- opts -------------------------------
+-- {{{1
 vim.opt.foldmethod = "marker"
 
 vim.o.termguicolors = true
@@ -58,3 +62,5 @@ vim.o.splitbelow = true
 --vim.o.cursorline = true
 vim.o.scrolloff = 8
 vim.o.signcolumn = "yes"
+-- }}}1
+-- -------------------------------------------
