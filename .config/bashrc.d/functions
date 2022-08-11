@@ -6,6 +6,9 @@ function maketar() { tar cvzf "${1%%/}.tar.gz"  "${1%%/}/"; }
 ## Create a ZIP archive of a file or folder.
 function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 
+age_pub () { cat ~/.local/share/age/age.key | grep public | cut -d':' -f2 | tr -d ' '; }
+age_pub_pw () { cat ~/.local/share/age/key.age | age --decrypt | grep public | cut -d':' -f2 | tr -d ' '; }
+
 # Functions
 mkcd () { mkdir -p $1 && cd $1 ; }
 mkmv () { 
