@@ -117,6 +117,10 @@ vim.api.nvim_set_keymap('n', 'ö', '`', noremap)
 -- set <leader> to ','
 vim.g.mapleader = ","
 
+-- hop.nvim
+
+vim.api.nvim_set_keymap('n', '<Leader>h', '<cmd>HopWord<CR>', noremap)
+
 -- nduco
 vim.api.nvim_set_keymap('n', '<Leader>ad', '<cmd>lua sess.detach()<CR>', noremap)
 vim.api.nvim_set_keymap('n', '<Leader>aa', '<cmd>lua sess.attach()<CR>', noremap)
