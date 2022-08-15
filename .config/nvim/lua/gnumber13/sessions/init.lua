@@ -1,4 +1,5 @@
 local M = {}
+
 xdg_state = io.popen("echo $XDG_STATE_HOME")
 
 if not (xdg_state == "" )
@@ -25,9 +26,15 @@ end
 function M.SaveSession()
     local session_file = userInput()
     local session_dir = vim.g.sessionDir
-    vim.cmd(':mksession! ' .. session_dir .. session_file)
+	local full_session_path = session_dir .. session_file
+
+	makeSession(full_session_path)
 end
 
+function makeSession(full_session_path)
+    vim.cmd(':wa')
+    vim.cmd(':mksession! ' .. full_session_path)
+end
 function M.ListSessions()
     local session_dir = vim.g.sessionDir
     dirLookup(session_dir)
@@ -37,8 +44,9 @@ function M.detach()
     local session_file = "detach_session"
     print(session_file)
     local session_dir = vim.g.sessionDir
-    vim.cmd(':mksession! ' .. session_dir .. session_file)
-    vim.cmd(':wa')
+	local full_session_path = session_dir .. session_file
+
+	makeSession(full_session_path)
     vim.cmd(':qa!')
 end
 
@@ -47,6 +55,7 @@ function M.attach()
     local session_dir = vim.g.sessionDir
     vim.cmd(':source ' .. session_dir .. session_file)
 end
+
 -- session_dir = vim.g.sessionDir
 --SaveSession("sesh3")
 --dirLookup(session_dir)

@@ -21,7 +21,7 @@ require "paq" {
         'tpope/vim-fugitive';
         'tpope/vim-surround';
         'neovim/nvim-lspconfig';
-		'phaazon/hop.nvim';
+	--	'phaazon/hop.nvim';
 
 		'nvim-lualine/lualine.nvim';
 		'L3MON4D3/LuaSnip';

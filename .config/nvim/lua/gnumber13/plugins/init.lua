@@ -12,11 +12,11 @@ require "gnumber13.plugins.vimwiki"
 -- ./luasnip.lua
 require "gnumber13.plugins.luasnip"
 -- ./bufferline.lua
-require "gnumber13.plugins.bufferline"
+-- require "gnumber13.plugins.bufferline"
 -- ./lualine.lua
-require "gnumber13.plugins.lualine"
+--require "gnumber13.plugins.lualine"
 
 -- 
-require'hop'.setup()
+-- require'hop'.setup()
 -- -----------------------------------------------------------------------------
 
