@@ -13,9 +13,36 @@ vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize"
 
 function dirLookup(dir)
    local p = io.popen('find "'..dir..'" -type f')  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.     
+   i = 1 
    for file in p:lines() do                         --Loop through all files
-       print(file)       
+       print("[" ..  i .. "] - "..file)       
+	   i = i +1
    end
+end
+
+function M.LoadSession(dir)
+    local dir = vim.g.sessionDir
+	local session_id = userInput()	
+  	local p = io.popen('find "'..dir..'" -type f')  --Open directory look for files, save data in p. By giving '-type f' as parameter, it returns all files.     
+
+	local lines = p:lines()
+
+	i = 1 
+
+	for line in p:lines() do 
+		if i == tonumber(session_id) then
+			local full_path = line
+		end
+	--	print(i)
+		i = i + 1 
+	end
+
+    vim.cmd(':source ' .. full_path)
+	
+end
+
+function M.ListSessions()
+	dirLookup(vim.g.sessionDir)
 end
 
 function userInput()
