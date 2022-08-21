@@ -3,6 +3,7 @@ fns = require "gnumber13.myfunctions"
 
 function on_term_open () 
 	ignore_autoroot_whith_terminal = true
+	vim.cmd(':norm A')
 end
 
 ------------------ autocmds ----------------------------------
@@ -11,6 +12,7 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = {"term://*"},
     callback = on_term_open,  -- Or myvimfun
 })
+
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = {"*"},

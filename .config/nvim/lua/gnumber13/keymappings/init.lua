@@ -184,6 +184,7 @@ vim.api.nvim_set_keymap('', '<S-M-+>', '<cmd>lua myfuns.win_horizontal_resize(6)
 
 -- normal mode
 vim.api.nvim_set_keymap('n', '<Enter>', 'gf', noremap)
+
 -- -- open terminal right
 vim.api.nvim_set_keymap('n', '<leader>tt', ':terminal<CR>i', noremap)
 vim.api.nvim_set_keymap('n', '<leader>th', ':sp<CR>:terminal<CR>:resize 10<CR>i', noremap)
@@ -217,6 +218,7 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', noremap)
 -- -- map esc-sequence of term-buffer to <esc>
 vim.cmd([[tnoremap <Esc> <C-\><C-n>]])
 vim.cmd([[tnoremap jj <C-\><C-n>]])
+vim.cmd([[tnoremap <C-w> <C-\><C-n><C-w>]])
 
 -- visual mode
 -- -- Vmap for maintain Visual Mode after shifting > and <
