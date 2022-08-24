@@ -91,6 +91,7 @@ alias rootdu="sudo ncdu -x / --exclude /home"
 alias projcd='cd $(project-select)'
 alias projnv='nvim $(project-select)'
 alias faststart='uvicorn main:app --reload'
+alias devbox='toolbox enter fedora-toolbox-37'
 
 ## configs
 alias vimrc='nvim ~/.config/nvim/init.lua'
