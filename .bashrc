@@ -9,7 +9,7 @@
 # source filses
 . "$HOME/.config/bashrc.d/aliases"
 . "$HOME/.config/bashrc.d/functions"
-#. "$HOME/.config/bashrc.d/private"
+. "$HOME/.config/bashrc.d/private"
 
 . "$HOME/.config/bashrc.d/prompt"
 . "$HOME/.config/bashrc.d/distros"
