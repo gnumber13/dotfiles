@@ -38,6 +38,9 @@ ls.add_snippets("sh", {
 
 	s("_bats_test", {
 		t('@test "'), i(1, "descr"), t({'"{', '\t'}),i(2, code), t({'', '}'})
+	}),
+	s("_files_in_dir", {
+		t('i=0;for f in '), i(1,"glob_pattern"), t(';do i=$(expr $i + 1);done')
 	})
 })
 
