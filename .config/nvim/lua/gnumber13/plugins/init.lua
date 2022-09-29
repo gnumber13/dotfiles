@@ -15,6 +15,8 @@ require "gnumber13.plugins.luasnip"
 -- require "gnumber13.plugins.bufferline"
 -- ./lualine.lua
 --require "gnumber13.plugins.lualine"
+-- ./native-lsp.lua
+require "gnumber13.plugins.native-lsp"
 
 -- 
 -- require'hop'.setup()

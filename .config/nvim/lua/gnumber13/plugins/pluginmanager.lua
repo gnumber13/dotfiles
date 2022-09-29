@@ -1,6 +1,5 @@
 require "paq" {
 	"savq/paq-nvim";                  -- Let Paq manage itself
-	--    "neovim/nvim-lspconfig";          -- Mind the semi-colons
 	--    "hrsh7th/nvim-cmp";
 	
     -- themes 
@@ -20,7 +19,12 @@ require "paq" {
 
         'tpope/vim-fugitive';
         'tpope/vim-surround';
+
+
         'neovim/nvim-lspconfig';
+
+		'williamboman/mason.nvim';
+		'williamboman/mason-lspconfig.nvim';
 	--	'phaazon/hop.nvim';
 
 		'nvim-lualine/lualine.nvim';
