@@ -29,8 +29,11 @@ require'lspconfig'.cssls.setup{}
 require'lspconfig'.html.setup{}
 
 -- pacman -S lua-language-server
-require'lspconfig'.somneko_lua.setup{}
+-- require'lspconfig'.somneko_lua.setup{}
 
 -- pacman -S yaml-language-server
 require'lspconfig'.yamlls.setup{}
+
+-- yay -S marksman-bin
+require'lspconfig'.marksman.setup{}
 
