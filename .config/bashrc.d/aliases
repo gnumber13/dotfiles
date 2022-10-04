@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # sourced by ~/.bashrc
+alias nopath=''
 
 # overwrites
 alias wl-copy='wl-copy --trim-newline'

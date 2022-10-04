@@ -64,6 +64,10 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export KDEHOME="$XDG_CONFIG_HOME"/kde
 
 
+# add rust toolchain binaries to path
+export PATH="$PATH:$HOME/.local/share/rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"
+export PATH="$PATH:$HOME/.local/share/rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"
+
 # for bun js
 export BUN_INSTALL="/home/matt/.local/opt/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"

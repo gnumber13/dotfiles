@@ -1,7 +1,4 @@
 -- https://wiki.archlinux.org/title/Neovim#Language_Server_Protocol
---
--- pacman -S rust-analyzer
-require'lspconfig'.rust_analyzer.setup{}
 
 -- pacman -S ccls
 require'lspconfig'.ccls.setup{}
@@ -9,8 +6,9 @@ require'lspconfig'.ccls.setup{}
 -- yay -S jdtls
 require'lspconfig'.jdtls.setup{}
 
-
--- pacman -S rust-analyzer
+-- rustup component add rust-analyzer (nightly toolchain)
+-- add `export PATH="$PATH:$HOME/.local/share/rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin"`
+-- to your ~/.profile or ~/.bashrc
 require'lspconfig'.rust_analyzer.setup{}
 
 -- pacman -S jedi-language-server
