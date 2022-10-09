@@ -18,7 +18,7 @@ require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.denols.setup{}
 
 -- pacman -S dart
-require'lspconfig'.dartls.setup{}
+-- require'lspconfig'.dartls.setup{}
 
 -- pacman -S vscode-css-languageserver 
 require'lspconfig'.cssls.setup{}
