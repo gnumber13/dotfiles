@@ -13,6 +13,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias maturin_publish='podman run --rm -v $(pwd):/io ghcr.io/pyo3/maturin publish --username __token__ --password "$(pass pypi_root_token)"'
+
 # reload kitty
 alias kittyup='kill -SIGUSR1 $(pgrep kitty)'
 
