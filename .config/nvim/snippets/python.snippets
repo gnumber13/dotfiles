@@ -84,3 +84,15 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+
+# useradded
+
+
+snippet readf
+	with open("${1:path}", encoding = 'utf-8') as f:
+		f.write(${2})
+
+snippet writef
+	with open("${1:path}", encoding = 'utf-8') as f:
+		${2} = f.read()
+		
